@@ -60,4 +60,9 @@ public interface BasePost {
     //EFFECTS: Return the list of users who liked the post
     public List getLikes();
 
+    //EFFECTS: Return a string representation of this
+    public String toString();
+
+    //EFFECTS: Compare this with the object passed. Return true if the object are the same , false otherwise
+    public boolean equals(Object other);
 }
