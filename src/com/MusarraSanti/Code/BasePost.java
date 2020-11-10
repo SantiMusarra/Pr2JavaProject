@@ -1,16 +1,17 @@
 package com.MusarraSanti.Code;
 
+import java.util.HashSet;
 import java.util.List;
 
 public interface BasePost {
 
     //OVERVIEW:
 
-    //TYPICAL ELEMENT
+    //TYPICAL ELEMENT:
 
-    //Abstraction function
+    //Abstraction function:
 
-    //Invariant representation
+    //Invariant representation:
 
     //EFFECTS: Return the id of this post
     public int getID();
@@ -18,11 +19,8 @@ public interface BasePost {
     //EFFECTS: Return the Author of this post
     public String getAuthor();
 
-
-
     //EFFECTS: Return the text of this post
     public String getText();
-
 
     //MODIFIES: this
     //EFFECTS: Assign a time and date to this post
@@ -43,6 +41,4 @@ public interface BasePost {
     //EFFECTS: Return a string representation of this
     public String toString();
 
-    //EFFECTS: Compare this with the object passed. Return true if the object are the same , false otherwise
-    public boolean equals(Object other);
 }
