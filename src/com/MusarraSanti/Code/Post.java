@@ -2,7 +2,6 @@ package com.MusarraSanti.Code;
 
 import com.MusarraSanti.Exception.ExceededCharactersLimitException;
 
-import javax.print.MultiDocPrintService;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -13,8 +12,6 @@ public class Post implements BasePost {
     private String text;
     private String timestamp;
     private List likes;
-
-
 
     /*
     REQUIRES: id >= 0 && author != null && text != null
