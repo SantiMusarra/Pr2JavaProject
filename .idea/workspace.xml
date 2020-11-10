@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1207f6-0167-40ce-949b-33486a691e1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/PostTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/PostTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/PostTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/Testing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,8 +59,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Testing.PostTesting" />
+    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Testing.Testing" />
       <module name="Pr2JavaProject" />
       <extension name="coverage">
         <pattern>
@@ -120,22 +123,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="529" y="123" key="FileChooserDialogImpl/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598511134" />
-    <state width="1865" height="270" key="GridCell.Tab.0.bottom" timestamp="1605020280753">
+    <state width="1865" height="270" key="GridCell.Tab.0.bottom" timestamp="1605026588104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605020280753" />
-    <state width="1865" height="270" key="GridCell.Tab.0.center" timestamp="1605020280753">
+    <state width="1865" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605026588104" />
+    <state width="1865" height="270" key="GridCell.Tab.0.center" timestamp="1605026588104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="270" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605020280753" />
-    <state width="1865" height="270" key="GridCell.Tab.0.left" timestamp="1605020280753">
+    <state width="1865" height="270" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605026588104" />
+    <state width="1865" height="270" key="GridCell.Tab.0.left" timestamp="1605026588104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="270" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605020280753" />
-    <state width="1865" height="270" key="GridCell.Tab.0.right" timestamp="1605020280753">
+    <state width="1865" height="270" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605026588104" />
+    <state width="1865" height="270" key="GridCell.Tab.0.right" timestamp="1605026588104">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="270" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605020280753" />
+    <state width="1865" height="270" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605026588104" />
     <state x="192" y="0" key="SettingsEditor" timestamp="1604598514970">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

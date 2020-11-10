@@ -1,6 +1,5 @@
 package com.MusarraSanti.Code;
 
-import java.util.HashSet;
 import java.util.List;
 
 public interface BasePost {
@@ -22,15 +21,12 @@ public interface BasePost {
     //EFFECTS: Return the text of this post
     public String getText();
 
-    //MODIFIES: this
-    //EFFECTS: Assign a time and date to this post
-    public String setTimeStamp();
-
     //EFFECTS: Return the time and date of this post
     public String getTimeStamp();
 
     //REQUIRES: user != null
     //THROWS: if user == null throw NullPointerException(unchecked)
+    //        if user alredy liked the post throw IllegalArgumentException
     //MODIFIES: this
     //EFFECTS: Add a like from user for this post
     public void addLike(String User);

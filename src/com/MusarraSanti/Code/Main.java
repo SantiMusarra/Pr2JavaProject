@@ -1,11 +1,11 @@
 package com.MusarraSanti.Code;
 
-import com.MusarraSanti.Testing.PostTesting;
+import com.MusarraSanti.Testing.Testing;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        PostTesting.RunTestPost1();
+        Testing.RunTestPost();
     }
 }

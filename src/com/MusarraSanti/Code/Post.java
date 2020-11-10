@@ -10,7 +10,7 @@ public class Post implements BasePost {
     private int id;
     private String author;
     private String text;
-    private String timestamp;
+    private final String timestamp;
     private List likes;
 
     /*
@@ -32,7 +32,7 @@ public class Post implements BasePost {
         this.id = id;
         this.author = author;
         this.text = text;
-        this.timestamp = setTimeStamp();
+        this.timestamp = getCurrentTimeStamp();
         this.likes = new ArrayList();
 
     }
@@ -49,7 +49,7 @@ public class Post implements BasePost {
         return this.text;
     }
 
-    public String setTimeStamp() {
+    private String getCurrentTimeStamp() {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
         return dateFormat.format(date);
