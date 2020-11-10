@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1207f6-0167-40ce-949b-33486a691e1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/ExceededCharactersLimitException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/PostTesting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/BasePost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Post.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +34,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Code.Main" />
+      <module name="Pr2JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.MusarraSanti.Code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.app.Main" />
       <module name="Pr2JavaProject" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -41,6 +61,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PostTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Testing.PostTesting" />
+      <module name="Pr2JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.MusarraSanti.Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.PostTesting" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -68,6 +108,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1605003873799">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="561" y="67" key="#com.intellij.ide.util.MemberChooser/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604950917721" />
+    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605003873799" />
     <state x="385" y="0" key="CommitChangelistDialog2" timestamp="1604688220731">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -76,13 +121,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="529" y="123" key="FileChooserDialogImpl/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598511134" />
+    <state width="1865" height="270" key="GridCell.Tab.0.bottom" timestamp="1605013529337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605013529337" />
+    <state width="1865" height="270" key="GridCell.Tab.0.center" timestamp="1605013529337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="270" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605013529337" />
+    <state width="1865" height="270" key="GridCell.Tab.0.left" timestamp="1605013529337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="270" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605013529337" />
+    <state width="1865" height="270" key="GridCell.Tab.0.right" timestamp="1605013529337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="270" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605013529337" />
     <state x="192" y="0" key="SettingsEditor" timestamp="1604598514970">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="192" y="0" key="SettingsEditor/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598514970" />
-    <state x="431" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1604686460771">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1605004653383">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="431" y="206" key="com.intellij.ide.util.TipDialog/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604686460771" />
+    <state x="431" y="206" key="com.intellij.ide.util.TipDialog/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604950820108" />
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605004653383" />
   </component>
 </project>
