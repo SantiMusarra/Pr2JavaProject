@@ -1,10 +1,25 @@
 package com.MusarraSanti.Testing;
 
 import com.MusarraSanti.Code.Post;
+import com.MusarraSanti.Code.SocialNetwork;
 
 public class Testing {
 
+
+
     public static void RunTestPost(){
+
+        System.out.println("\n---------------------TEST POST 1 MicroBlog---------------------");
+
+        SocialNetwork MicroBlog = new SocialNetwork("MicroBlog");
+        String utente1 = "Santi";
+        MicroBlog.createUser(utente1);
+
+        MicroBlog.createPost(utente1 ,"Salam aleikum" );
+        MicroBlog.createPost(utente1, "Giovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani ReGiovani Re");
+        System.out.println("\n---------------------TEST WrittenBy---------------------");
+        System.out.println(MicroBlog.writtenBy(utente1));
+
 
         System.out.println("\n---------------------TEST POST 1---------------------");
         try{

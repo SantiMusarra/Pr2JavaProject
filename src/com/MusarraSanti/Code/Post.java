@@ -61,10 +61,9 @@ public class Post implements BasePost {
 
     public void addLike(String User) {
         if(User == null) throw new NullPointerException();
-        else{
-            if(this.likes.contains(User))throw new IllegalArgumentException("You cannot like the post twice");
-            this.likes.add(User);
-        }
+        if(this.likes.contains(User)) /*throw new IllegalArgumentException("You cannot like the post twice")*/;
+        else this.likes.add(User);
+
     }
 
     public List getLikes() {
