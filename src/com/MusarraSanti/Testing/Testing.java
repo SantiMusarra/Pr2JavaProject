@@ -9,7 +9,7 @@ public class Testing {
 
     public static void RunTestMicroBlog(){
 
-        System.out.println("\n---------------------TEST MicroBlog---------------------");
+        System.out.println("\n---------------------TEST MicroBlog Creazione Rete Sociale---------------------");
 
         SocialNetwork MicroBlog = new SocialNetwork("MicroBlog");
 
@@ -25,7 +25,7 @@ public class Testing {
         MicroBlog.createUser(utente4);
         String utente5 = "Matteo";
         MicroBlog.createUser(utente5);
-        String utente6 = "Salvo";
+        String utente6 = "Matteo";
         MicroBlog.createUser(utente6);
 
         System.out.println("\n---------------------TEST MicroBlog Creazione Post---------------------");
@@ -44,7 +44,7 @@ public class Testing {
         MicroBlog.addLikeToPost(post4 , utente1);
         MicroBlog.addLikeToPost(post4 , utente2);
         MicroBlog.addLikeToPost(post4 , utente5);
-        MicroBlog.addLikeToPost(post4 , utente6);
+        MicroBlog.addLikeToPost(post4 , utente3);
 
         MicroBlog.addLikeToPost(post1 , utente3);
         MicroBlog.addLikeToPost(post1 , utente1);
@@ -52,6 +52,8 @@ public class Testing {
         System.out.println("\n---------------------TEST MicroBlog Metodo WrittenBy---------------------");
         System.out.println(MicroBlog.writtenBy(utente4));
         System.out.println(MicroBlog.writtenBy(utente1));
+        System.out.println(MicroBlog.writtenBy(utente5));
+
 
     }
 }

@@ -41,21 +41,23 @@ public class SocialNetwork implements BaseSocialNetwork {
     public void createUser(String username){
 
         //VERIFICARE CHE NON ESISTE GIA' L'UTENTE CHE SI STA CERCANDO DI CREARE
-        List<Post> listOfPost = new LinkedList<>();
-        Set listOfFollowers = new HashSet<String>();
-        Set listOfFollowed = new HashSet<String>();
 
-        this.userPosts.put(username, listOfPost);
-        this.followers.put(username,listOfFollowers);
-        this.followed.put(username, listOfFollowed);
+        if(userPosts.containsKey(username)) System.out.println("Utente " + username +" già presente nella Rete Sociale");
+        else{
+            List<Post> listOfPost = new LinkedList<>();
+            Set listOfFollowers = new HashSet<String>();
+            Set listOfFollowed = new HashSet<String>();
+
+            this.userPosts.put(username, listOfPost);
+            this.followers.put(username,listOfFollowers);
+            this.followed.put(username, listOfFollowed);
+        }
     }
 
     public void addLikeToPost(Post post , String user){
 
-        post.addLike(user);
-
         //TO DO CONTROLLARE CHE USER SIA ALL'INTERNO DEL SOCIAL NETWORK!
-
+        post.addLike(user);
         //Aggiungo username ai followers dell'autore del post
         Set listOfFollowers = followers.get(post.getAuthor());
         listOfFollowers.add(user);
@@ -85,12 +87,16 @@ public class SocialNetwork implements BaseSocialNetwork {
         return null;
     }
 
-    public List<Post> writtenBy(String Username) {
+    public List<Post> writtenBy(String user) {
 
         //VERIFICA CHE L'UTENTE ABBIA SCRITTO ALMENO UNA VOLTA UN POST ALTRIMENTI STAMPARE UN AVVISO
-        System.out.println("Posts written by user named " + Username);
-        List<Post> postList = userPosts.get(Username);
-        return postList;
+        if(userPosts.get(user).isEmpty()) System.out.println("\nL'utente " + user + " non ha ancora scritto nessun post");
+        else {
+            System.out.println("Posts written by user named " + user);
+            List<Post> postList = userPosts.get(user);
+            return postList;
+        }
+        return null;
     }
 
     public List<Post> writtenBy(List<Post> ps, String username) {
