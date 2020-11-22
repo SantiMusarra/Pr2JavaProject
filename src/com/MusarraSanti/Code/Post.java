@@ -62,6 +62,7 @@ public class Post implements BasePost {
     public void addLike(String User) {
         if(User == null) throw new NullPointerException();
         if(this.likes.contains(User)) /*throw new IllegalArgumentException("You cannot like the post twice")*/;
+        else if(User == this.getAuthor()) /*Non puoi metterti like da solo*/ ;
         else this.likes.add(User);
 
     }
@@ -72,7 +73,7 @@ public class Post implements BasePost {
 
     public String toString(){
 
-        return ("Post id : " + this.id + "\nUser: " + this.author + "\nPost Text: " + this.text + "\nDate published: " + this.timestamp
+        return ("\nPost id : " + this.id + "\nUser: " + this.author + "\nPost Text: " + this.text + "\nDate published: " + this.timestamp
                     + "\nPost Likes: " + this.likes.size() + "\nPeople who liked the post :" + this.likes.toString());
     }
 }
