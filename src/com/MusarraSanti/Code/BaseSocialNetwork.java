@@ -1,5 +1,9 @@
 package com.MusarraSanti.Code;
 
+import com.MusarraSanti.Exception.ExceededCharactersLimitException;
+import com.MusarraSanti.Exception.UserAlreadyExistException;
+import com.MusarraSanti.Exception.UserNotExistException;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,36 +20,37 @@ public interface BaseSocialNetwork {
 
 
     /*
-    REQUIRES: user != null && text != null
+    REQUIRES: user != null && text != null && text.length < 140
     THROWS: if user == null throws NullPointerException
             if text == null throws NullPointerException
+            if text.length >=140 throws ExceededCharactersLimitException ( checked )
     MODIFIES:
-    EFFETCS: crea un post nella rete sociale
+    EFFECTS: crea un post nella rete sociale
      */
-    public Post createPost(String user , String text);
+    public Post createPost(String user , String text)throws UserNotExistException, ExceededCharactersLimitException;
 
     /*
     REQUIRES: username != null
     THROWS: if username == null throws NullPointerException
     MODIFIES:
-    EFFETCS: crea un nuovo utente nella rete sociale
+    EFFECTS: crea un nuovo utente nella rete sociale
      */
-    public void createUser(String username);
+    public void createUser(String username) throws UserAlreadyExistException;
 
     /*
     REQUIRES: post != null && user != null
-    THROWS: if post == null throws IllegalArgumentException
+    THROWS: if post == null throws NullPointerException
             if user == null throws NullPointerException
     MODIFIES:
-    EFFETCS: aggiunge un like ad un post nella rete sociale
+    EFFECTS: aggiunge un like ad un post nella rete sociale
      */
-    public void addLikeToPost(Post post , String user);
+    public void addLikeToPost(Post post , String user) throws UserNotExistException;
 
     /*
     REQUIRES: ps != null
     THROWS: if ps == null throws IllegalArgumentException
     MODIFIES:
-    EFFETCS: restituisce la rete sociale derivata dalla lista dei post (Utenti -> Follower)
+    EFFECTS: restituisce la rete sociale derivata dalla lista dei post (Utenti -> Follower)
      */
     public Map< String , Set<String> > guessFollowers(List<Post> ps);
 
@@ -53,7 +58,7 @@ public interface BaseSocialNetwork {
     REQUIRES:  followers != null
     THROWS: if followers == null throws NullPointerException
     MODIFIES:
-    EFFETCS: restituisce i 3 utenti più influenti ( quelli con il maggior numero di followers) della rete sociale
+    EFFECTS: restituisce i 3 utenti più influenti ( quelli con il maggior numero di followers) della rete sociale
      */
     public List<String> influencers(Map < String , Set<String> > followers);
 
@@ -61,7 +66,7 @@ public interface BaseSocialNetwork {
     REQUIRES:
     THROWS:
     MODIFIES:
-    EFFETCS: restituisce la lista degli utenti che hanno pubblicato almeno un post nella rete sociale
+    EFFECTS: restituisce la lista degli utenti che hanno pubblicato almeno un post nella rete sociale
      */
     public Set<String> getMentionedUsers();
 
@@ -69,7 +74,7 @@ public interface BaseSocialNetwork {
     REQUIRES:  ps != null
     THROWS: if ps == null throws NullPointerException
     MODIFIES:
-    EFFETCS: restituisce dalla lista dei post una lista degli autori di quei post
+    EFFECTS: restituisce dalla lista dei post una lista degli autori di quei post
      */
     public Set<String> getMentionedUsers(List<Post> ps);
 
@@ -77,16 +82,16 @@ public interface BaseSocialNetwork {
     REQUIRES:   user != null
     THROWS: if user == null throws NullPointerException
     MODIFIES:
-    EFFETCS:  restituisce la lista dei post pubblicati da user
+    EFFECTS:  restituisce la lista dei post pubblicati da user
      */
-    public List<Post> writtenBy(String user);
+    public List<Post> writtenBy(String user) throws UserNotExistException;
 
     /*
-    REQUIRES:   ps != null && user != null
+    REQUIRES:  ps != null && user != null
     THROWS: if ps == null throws NullPointerException
             if user == null throws NullPointerException
     MODIFIES:
-    EFFETCS: restituisce la lista dei post pubblicati dall'utente dalla lista dei post parametro
+    EFFECTS: restituisce la lista dei post pubblicati dall'utente dalla lista dei post parametro
      */
     public List<Post> writtenBy(List<Post> ps , String user);
 
@@ -94,7 +99,7 @@ public interface BaseSocialNetwork {
     REQUIRES: words != null
     THROWS: words == null throws NullPointerException
     MODIFIES:
-    EFFETCS: restituisce una lista di post che contengono le parole contenute nella lista parametro
+    EFFECTS: restituisce una lista di post che contengono le parole contenute nella lista parametro
      */
     public List<Post> containing(List<String> words);
 
@@ -102,7 +107,7 @@ public interface BaseSocialNetwork {
     REQUIRES: offensiveWords != null
     THROWS: offensiveWords == null throws NullPointerException
     MODIFIES:
-    EFFETCS: restituisce una lista di post che contengono le parole contenute nella lista parametro
+    EFFECTS: restituisce una lista di post che contengono le parole contenute nella lista parametro
      */
     public List<Post> checkOffensiveContent(List<String> offensiveWords);
 

@@ -7,11 +7,12 @@ import java.util.*;
 
 public class Post implements BasePost {
 
+    public static final int CHARACTERS_LIMIT = 140;
     private int id;
     private String author;
     private String text;
     private final String timestamp;
-    private List likes;
+    private List<String> likes;
 
     /*
     REQUIRES: id >= 0 && author != null && text != null
@@ -27,13 +28,13 @@ public class Post implements BasePost {
         if(id < 0) throw new IllegalArgumentException("Id is negative");
         if(author == null)  throw new NullPointerException();
         if(text == null) throw  new NullPointerException();
-        if(text.length() > 140 ) throw new ExceededCharactersLimitException();
+        if(text.length() > CHARACTERS_LIMIT) throw new ExceededCharactersLimitException();
 
         this.id = id;
         this.author = author;
         this.text = text;
         this.timestamp = getCurrentTimeStamp();
-        this.likes = new LinkedList();
+        this.likes = new LinkedList<String>();
 
     }
 
@@ -61,13 +62,14 @@ public class Post implements BasePost {
 
     public void addLike(String User) {
         if(User == null) throw new NullPointerException();
-        if(this.likes.contains(User)) /*throw new IllegalArgumentException("You cannot like the post twice")*/;
-        else if(User == this.getAuthor()) /*Non puoi metterti like da solo*/ ;
-        else this.likes.add(User);
+        if(this.likes.contains(User) ) throw new IllegalArgumentException("Non puoi mettere like due volte");
+        if(User.equals(this.author)) throw new IllegalArgumentException("Non puoi mettere like al tuo post");
+
+        this.likes.add(User);
 
     }
 
-    public List getLikes() {
+    public List<String> getLikes() {
         return this.likes;
     }
 

@@ -1,5 +1,9 @@
 package com.MusarraSanti.Code;
 
+import com.MusarraSanti.Exception.ExceededCharactersLimitException;
+import com.MusarraSanti.Exception.UserAlreadyExistException;
+import com.MusarraSanti.Exception.UserNotExistException;
+
 import javax.print.attribute.standard.NumberUp;
 import java.util.*;
 
@@ -31,85 +35,120 @@ public class SocialNetwork implements BaseSocialNetwork {
         this.followed = new HashMap<String,Set<String>>();
     }
 
-    public Post createPost(String user , String text){
+    private boolean isUserExist(String user){
+        //TODO SCRIVERE SPECIFICA
+        if(user == null) throw new NullPointerException();
 
-        if(user == null || text == null) throw new NullPointerException();
-
-        //Controllo che user sia all'interno della rete sociale
-        if(userPosts.containsKey(user)) {
-            //Creo il post controllando che la sua creazione  superi i controlli e lo inserisco nella lista dei post dell'utente
-            try{
-                Post myPost = new Post(id++ , user , text);
-                List<Post> listOfPosts = userPosts.get(user);
-                listOfPosts.add(myPost);
-                System.out.println("Post Created Successfully with" + myPost.toString() + "\n");
-                return myPost;
-
-            }
-            catch(Exception e){  //Gestisco le eccezioni ExceededCharactersLimitException e IllegalArgumentException
-                System.out.println(e.getMessage());
-                return null;
-            }
-        }
-        else return null;
-
+        return userPosts.containsKey(user);
     }
 
-    public void createUser(String username){
+    public void createUser(String username) throws UserAlreadyExistException {
         if(username == null ) throw new NullPointerException();
 
         //Verifico che l'utene non sia già presente all'interno della rete sociale
-        if(userPosts.containsKey(username)) System.out.println("Utente " + username +" già presente nella Rete Sociale");
-        else{
-            List<Post> listOfPost = new LinkedList<>();
-            Set<String> listOfFollowers = new HashSet<String>();
-            Set<String> listOfFollowed = new HashSet<String>();
+        if(isUserExist(username)) throw new UserAlreadyExistException();
 
-            //Creo una Map user -> post che rappresenta tutti i post dell'utente attualmente inizializzata
-            this.userPosts.put(username, listOfPost);
-            //Creo una Map user -> string che rappresenta tutti i followers dell'utente attualmente inizializzata
-            this.followers.put(username,listOfFollowers);
-            //Creo una Map user -> string che rappresenta tutti gli utenti seguiti dall'utente attualmente inizializzata
-            this.followed.put(username, listOfFollowed);
-        }
+        List<Post> listOfPost = new LinkedList<Post>();
+        Set<String> listOfFollowers = new HashSet<String>();
+        Set<String> listOfFollowed = new HashSet<String>();
+
+        //Creo una Map user -> post che rappresenta tutti i post dell'utente attualmente inizializzata
+        this.userPosts.put(username, listOfPost);
+        //Creo una Map user -> string che rappresenta tutti i followers dell'utente attualmente inizializzata
+        this.followers.put(username,listOfFollowers);
+        //Creo una Map user -> string che rappresenta tutti gli utenti seguiti dall'utente attualmente inizializzata
+        this.followed.put(username, listOfFollowed);
+
     }
 
-    public void addLikeToPost(Post post , String user){
+    public Post createPost(String user , String text) throws UserNotExistException ,ExceededCharactersLimitException {
 
-        if(post == null) throw new IllegalArgumentException();
+        if(user == null || text == null) throw new NullPointerException();
+        //Controllo che il testo non sia più di 140 caratteri
+        if(text.length() > Post.CHARACTERS_LIMIT ) throw new ExceededCharactersLimitException();
+        //Controllo che user sia all'interno della rete sociale
+        if(!isUserExist(user)) throw new UserNotExistException();
+
+        //Creo il post e lo inserisco nella lista dei post dell'utente
+        Post myPost = new Post(id , user , text);
+        id++;
+        List<Post> listOfPosts = userPosts.get(user);
+        listOfPosts.add(myPost);
+        return myPost;
+
+    }
+
+    public void addLikeToPost(Post post , String user) throws  UserNotExistException{
+
+        if(post == null) throw new NullPointerException();
         if(user == null) throw new NullPointerException();
 
-        //Controllo che l'utente esista
-        if(userPosts.containsKey(user)){
+        //Controllo che l'utente e l'autore del post esistano
+        if(!isUserExist(user) || !isUserExist(post.getAuthor()) ) throw new UserNotExistException();
 
-            //Aggiungo l'utente alla lista dei like del post
-            post.addLike(user);
+        //Aggiungo l'utente alla lista dei like del post
+        post.addLike(user);
 
-            //Aggiungo username ai followers dell'autore del post
-            Set<String> listOfFollowers = followers.get(post.getAuthor());
-            listOfFollowers.add(user);
+        //Aggiungo username ai followers dell'autore del post
+        Set<String> listOfFollowers = followers.get(post.getAuthor());
+        listOfFollowers.add(user);
 
-            //Aggiungo l'autore del post ai followed ( I seguiti ) di username
-            Set<String> listOfFollowed = followed.get(user);
-            listOfFollowed.add(post.getAuthor());
-        }
-        else System.out.println("Utente " + user + " non presente nella rete sociale e non può mettere like");
+        //Aggiungo l'autore del post ai followed ( I seguiti ) di username
+        Set<String> listOfFollowed = followed.get(user);
+        listOfFollowed.add(post.getAuthor());
 
     }
 
     public Map<String, Set<String>> guessFollowers(List<Post> ps) {
 
         if(ps == null) throw new NullPointerException();
+
+        Map<String , Set<String>> guessedFollowers = new HashMap<>();
+
         for (Post post : ps) {
-            post.getAuthor();
+            Set<String> followers;
+
+            if(!guessedFollowers.containsKey(post.getAuthor())){
+                followers =  new HashSet<String>();
+                guessedFollowers.put(post.getAuthor() , followers);
+            }
+            else{
+                followers = guessedFollowers.get(post.getAuthor());
+            }
+            followers.addAll(post.getLikes());
+
         }
-        //OTTENERE GLI USERNAME DALLA LISTA DEI POST E TORNARE LA MAPPA DEI RELATIVI USER
-
-
-        return null;
+        return guessedFollowers;
     }
 
     public List<String> influencers(Map<String, Set<String>> followers) {
+
+        String firstUser;
+        int firstUserFollowers = -1;
+        String secondUser;
+        int secondUserFollowers = -1;
+        String thirdUser;
+        int thirdUserFollowers = -1;
+
+        for (Map.Entry<String, Set<String>> entry: followers.entrySet()) {
+
+            String user = entry.getKey();
+            Set<String> userFollowers = entry.getValue();
+
+            int countedFollowers = userFollowers.size();
+
+            if(countedFollowers > firstUserFollowers){      //BESTEMMIARE A DOMENICO
+                firstUser = user;
+                firstUserFollowers = countedFollowers;
+            }
+            else if(countedFollowers == firstUserFollowers){
+            //IL SECONDO DEVE DIVENTARE IL TERZO
+
+                // Counted deve diventare il secondo
+
+            }
+        }
+
         return null;
     }
 
@@ -121,20 +160,29 @@ public class SocialNetwork implements BaseSocialNetwork {
         return null;
     }
 
-    public List<Post> writtenBy(String user) {
+    public List<Post> writtenBy(String user) throws UserNotExistException{
 
-        //VERIFICA CHE L'UTENTE ABBIA SCRITTO ALMENO UNA VOLTA UN POST ALTRIMENTI STAMPARE UN AVVISO
-        if(userPosts.get(user).isEmpty()) System.out.println("\nL'utente " + user + " non ha ancora scritto nessun post");
-        else {
-            System.out.println("Posts written by user named " + user);
-            List<Post> postList = userPosts.get(user);
-            return postList;
-        }
-        return null;
+        if(user == null) throw new NullPointerException();
+        if(!isUserExist(user)) throw new UserNotExistException();
+
+        List<Post> postList = userPosts.get(user);
+        return postList;
     }
 
-    public List<Post> writtenBy(List<Post> ps, String user) {
-        return null;
+    public List<Post> writtenBy(List<Post> ps, String user){
+
+        if(user == null) throw new NullPointerException();
+        if(ps == null) throw   new NullPointerException();
+
+        List<Post> listOfPost = new LinkedList<>();
+
+        for (Post post : ps) {
+
+            if(post.getAuthor().equals(user)) listOfPost.add(post);
+
+        }
+
+        return listOfPost;
     }
 
     public List<Post> containing(List<String> words) {

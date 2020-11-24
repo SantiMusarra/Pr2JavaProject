@@ -26,13 +26,13 @@ public interface BasePost {
 
     //REQUIRES: user != null
     //THROWS: if user == null throw NullPointerException(unchecked)
-    //        if user alredy liked the post throw IllegalArgumentException
+    //        if user already liked the post throw IllegalArgumentException
     //MODIFIES: this
     //EFFECTS: Add a like from user for this post
     public void addLike(String User);
 
     //EFFECTS: Return the list of users who liked the post
-    public List getLikes();
+    public List<String> getLikes();
 
     //EFFECTS: Return a string representation of this
     public String toString();
