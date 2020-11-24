@@ -33,7 +33,7 @@ public class Post implements BasePost {
         this.author = author;
         this.text = text;
         this.timestamp = getCurrentTimeStamp();
-        this.likes = new ArrayList();
+        this.likes = new LinkedList();
 
     }
 
