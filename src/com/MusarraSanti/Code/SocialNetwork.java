@@ -35,6 +35,12 @@ public class SocialNetwork implements BaseSocialNetwork {
         this.followed = new HashMap<String,Set<String>>();
     }
 
+    /*
+    REQUIRES: user != null
+    THROWS: if user == null throws NullPointerException
+    MODIFIES:
+    EFFECTS: ritorna la verifica dell'esistenza dell'utente. True se l'utente esiste false altrimenti
+    */
     private boolean isUserExist(String user){
         //TODO SCRIVERE SPECIFICA
         if(user == null) throw new NullPointerException();
@@ -48,9 +54,9 @@ public class SocialNetwork implements BaseSocialNetwork {
         //Verifico che l'utene non sia già presente all'interno della rete sociale
         if(isUserExist(username)) throw new UserAlreadyExistException();
 
-        List<Post> listOfPost = new LinkedList<Post>();
-        Set<String> listOfFollowers = new HashSet<String>();
-        Set<String> listOfFollowed = new HashSet<String>();
+        List<Post> listOfPost = new LinkedList<>();
+        Set<String> listOfFollowers = new HashSet<>();
+        Set<String> listOfFollowed = new HashSet<>();
 
         //Creo una Map user -> post che rappresenta tutti i post dell'utente attualmente inizializzata
         this.userPosts.put(username, listOfPost);
@@ -123,6 +129,8 @@ public class SocialNetwork implements BaseSocialNetwork {
 
     public List<String> influencers(Map<String, Set<String>> followers) {
 
+        if(followers == null)   throw new NullPointerException();
+
         String firstUser;
         int firstUserFollowers = -1;
         String secondUser;
@@ -137,7 +145,7 @@ public class SocialNetwork implements BaseSocialNetwork {
 
             int countedFollowers = userFollowers.size();
 
-            if(countedFollowers > firstUserFollowers){      //BESTEMMIARE A DOMENICO
+            if(countedFollowers > firstUserFollowers){
                 firstUser = user;
                 firstUserFollowers = countedFollowers;
             }
@@ -153,11 +161,28 @@ public class SocialNetwork implements BaseSocialNetwork {
     }
 
     public Set<String> getMentionedUsers() {
-        return null;
+
+        Set<String> listOfUsers = new HashSet<>();
+
+        for (Map.Entry<String ,List<Post>> entry : userPosts.entrySet()) {
+
+            listOfUsers.add(entry.getKey());
+        }
+        return listOfUsers;
     }
 
     public Set<String> getMentionedUsers(List<Post> ps) {
-        return null;
+
+        if(ps == null) throw new NullPointerException();
+
+        Set<String> listOfUsers = new HashSet<>();
+
+        for (Post post : ps) {
+
+            listOfUsers.add(post.getAuthor());
+        }
+
+        return listOfUsers;
     }
 
     public List<Post> writtenBy(String user) throws UserNotExistException{
@@ -186,10 +211,23 @@ public class SocialNetwork implements BaseSocialNetwork {
     }
 
     public List<Post> containing(List<String> words) {
-        return null;
+
+        if(words == null) throw new NullPointerException();
+
+        List<Post> posts = new LinkedList<>();
+
+
+
+        return posts;
     }
 
     public List<Post> checkOffensiveContent(List<String> offensiveWords) {
-        return null;
+
+        if(offensiveWords == null) throw new NullPointerException();
+
+        List<Post> posts = new LinkedList<>();
+        
+
+        return posts;
     }
 }
