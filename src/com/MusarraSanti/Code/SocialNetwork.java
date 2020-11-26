@@ -3,6 +3,7 @@ package com.MusarraSanti.Code;
 import com.MusarraSanti.Exception.ExceededCharactersLimitException;
 import com.MusarraSanti.Exception.UserAlreadyExistException;
 import com.MusarraSanti.Exception.UserNotExistException;
+import com.sun.tools.attach.AttachOperationFailedException;
 
 import javax.print.attribute.standard.NumberUp;
 import java.util.*;
@@ -13,13 +14,9 @@ public class SocialNetwork implements BaseSocialNetwork {
     private String nameNetwork;
     private int id = 0;
 
-    //private Map<String , User>
-    //private Map<User , Void> Users; //
-
     private Map<String,List<Post>> userPosts; //Username -> List of Posts
     private Map<String,Set<String>> followers; //Username -> List of Followers
     private Map<String,Set<String>> followed; //Username -> List of Followed
-
     /*
     REQUIRES: nameNetwork != null
     THROWS: if nameNetwork == null throws NullPointerException   (unchecked)
@@ -89,6 +86,8 @@ public class SocialNetwork implements BaseSocialNetwork {
         if(post == null) throw new NullPointerException();
         if(user == null) throw new NullPointerException();
 
+        //TODO E se il post non  è presente nel social network?
+
         //Controllo che l'utente e l'autore del post esistano
         if(!isUserExist(user) || !isUserExist(post.getAuthor()) ) throw new UserNotExistException();
 
@@ -131,12 +130,10 @@ public class SocialNetwork implements BaseSocialNetwork {
 
         if(followers == null)   throw new NullPointerException();
 
-        String firstUser;
-        int firstUserFollowers = -1;
-        String secondUser;
-        int secondUserFollowers = -1;
-        String thirdUser;
-        int thirdUserFollowers = -1;
+
+        List<String> influencer = new ArrayList<>();
+
+        int max = -1 , sec = 0;
 
         for (Map.Entry<String, Set<String>> entry: followers.entrySet()) {
 
@@ -145,21 +142,20 @@ public class SocialNetwork implements BaseSocialNetwork {
 
             int countedFollowers = userFollowers.size();
 
-            if(countedFollowers > firstUserFollowers){
-                firstUser = user;
-                firstUserFollowers = countedFollowers;
+            if(countedFollowers > max){
+                influencer.add(user);
+                max = countedFollowers;
             }
-            else if(countedFollowers == firstUserFollowers){
-            //IL SECONDO DEVE DIVENTARE IL TERZO
-
-                // Counted deve diventare il secondo
-
+            if(countedFollowers < max && countedFollowers > sec ){
+                influencer.add(user);
             }
+
         }
 
-        return null;
+        return influencer;
     }
 
+    //Ritorna la lista degli utenti del social network che sono iscritti
     public Set<String> getMentionedUsers() {
 
         Set<String> listOfUsers = new HashSet<>();
@@ -171,6 +167,7 @@ public class SocialNetwork implements BaseSocialNetwork {
         return listOfUsers;
     }
 
+    //Ritorna la lista degli utenti che hanno scritto almeno un post tra quelli passati o //optional:che hanno messo like ad almeno uno dei post passati
     public Set<String> getMentionedUsers(List<Post> ps) {
 
         if(ps == null) throw new NullPointerException();
@@ -180,6 +177,7 @@ public class SocialNetwork implements BaseSocialNetwork {
         for (Post post : ps) {
 
             listOfUsers.add(post.getAuthor());
+            //listOfUsers.addAll(post.getLikes());
         }
 
         return listOfUsers;
@@ -216,18 +214,24 @@ public class SocialNetwork implements BaseSocialNetwork {
 
         List<Post> posts = new LinkedList<>();
 
+        for (Map.Entry<String , List<Post>> entry : userPosts.entrySet()) {
 
+            for (Post post : entry.getValue()) {
 
+                for (String word: words) {
+
+                    if(post.getText().contains(word)){
+
+                        posts.add(post);
+                        break;
+                    }
+
+                }
+
+            }
+
+        }
         return posts;
     }
 
-    public List<Post> checkOffensiveContent(List<String> offensiveWords) {
-
-        if(offensiveWords == null) throw new NullPointerException();
-
-        List<Post> posts = new LinkedList<>();
-        
-
-        return posts;
-    }
 }

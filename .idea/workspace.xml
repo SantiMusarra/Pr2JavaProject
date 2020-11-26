@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1207f6-0167-40ce-949b-33486a691e1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserAlreadyExistException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Testing.Testing" />
+    <configuration name="TestingSocialNetwork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Testing.TestingSocialNetwork" />
       <module name="Pr2JavaProject" />
       <extension name="coverage">
         <pattern>
@@ -105,11 +109,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1606241162384">
+    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1606321236106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="561" y="67" key="#com.intellij.ide.util.MemberChooser/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604950917721" />
-    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606241162384" />
+    <state x="673" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606321236106" />
     <state x="726" y="379" width="467" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605017522767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,22 +127,22 @@
     </state>
     <state x="529" y="123" key="FileChooserDialogImpl/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598511134" />
     <state x="635" y="149" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605872615555" />
-    <state width="932" height="270" key="GridCell.Tab.0.bottom" timestamp="1606302418292">
+    <state width="1865" height="294" key="GridCell.Tab.0.bottom" timestamp="1606390297564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606302418292" />
-    <state width="932" height="270" key="GridCell.Tab.0.center" timestamp="1606302418292">
+    <state width="1865" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
+    <state width="1865" height="294" key="GridCell.Tab.0.center" timestamp="1606390297564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="270" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606302418292" />
-    <state width="932" height="270" key="GridCell.Tab.0.left" timestamp="1606302418292">
+    <state width="1865" height="294" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
+    <state width="1865" height="294" key="GridCell.Tab.0.left" timestamp="1606390297564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="270" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606302418292" />
-    <state width="932" height="270" key="GridCell.Tab.0.right" timestamp="1606302418292">
+    <state width="1865" height="294" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
+    <state width="1865" height="294" key="GridCell.Tab.0.right" timestamp="1606390297564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="932" height="270" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606302418292" />
+    <state width="1865" height="294" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
     <state width="1865" height="335" key="GridCell.Tab.1.bottom" timestamp="1606061664269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -159,11 +163,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="192" y="0" key="SettingsEditor/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598514970" />
-    <state x="517" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1606301204980">
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1606337633532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="206" key="com.intellij.ide.util.TipDialog/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1605197474499" />
-    <state x="517" y="249" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606301204980" />
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606337633532" />
     <state x="70" y="0" key="new project wizard" timestamp="1605197497164">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -172,9 +176,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605873400376" />
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1606306717957">
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1606319561589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606306717957" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606319561589" />
   </component>
 </project>

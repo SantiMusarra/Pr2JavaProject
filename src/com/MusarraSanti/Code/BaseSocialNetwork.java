@@ -17,7 +17,6 @@ public interface BaseSocialNetwork {
     //Abstraction function:
 
     //Invariant representation:
-    //TODO AGGIORNARE SPECIFICHE
 
     /*
     REQUIRES: username != null && !isUserExist(username)
@@ -107,15 +106,6 @@ public interface BaseSocialNetwork {
     EFFECTS: restituisce una lista di post che contengono le parole contenute nella lista parametro
      */
     public List<Post> containing(List<String> words);
-
-    /*
-    REQUIRES: offensiveWords != null
-    THROWS: offensiveWords == null throws NullPointerException
-    MODIFIES:
-    EFFECTS: restituisce una lista di post che contengono le parole contenute nella lista parametro
-     */
-    public List<Post> checkOffensiveContent(List<String> offensiveWords);
-
 
 
 }
