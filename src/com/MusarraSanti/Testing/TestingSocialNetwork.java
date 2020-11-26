@@ -29,7 +29,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestCreateUser(){
 
-        System.out.println("\n---------------------TEST MicroBlog Creazione Utenti---------------------");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK CREAZIONE UTENTI---------------------");
         try{
             System.out.println("Creo utente " + utente1);
             MicroBlog.createUser(utente1);
@@ -59,7 +59,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestCreatePosts(){
 
-        System.out.println("\n---------------------TEST MicroBlog Creazione Post all'interno della rete sociale---------------------");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK CREAZIONE POST ALL'INTERNO DELLA RETE SOCIALE---------------------");
 
         try{
             System.out.println("Creo Post 1");
@@ -92,7 +92,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestAddLikeToPosts(){
 
-        System.out.println("\n---------------------TEST MicroBlog Aggiunta Like ai Post della rete sociale---------------------\n");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK AGGIUNTA LIKE AI POST DELLA RETE SOCIALE---------------------\n");
 
         //Controllo i like messi correttamente
         try{
@@ -136,7 +136,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestGuessFollowers(){
 
-        System.out.println("\n---------------------TEST MicroBlog GuessFollowers e Influencers---------------------\n");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK GUESSFOLLOWERS E INFLUENCERS---------------------\n");
 
         List<Post> listOfPosts = new LinkedList<>();
         listOfPosts.add(post1);
@@ -147,12 +147,12 @@ public class TestingSocialNetwork {
 
         List<String> mostFollowers =  MicroBlog.influencers(followers);
 
-        System.out.println("Top 3 degli utenti più popolari ( in ordine crescente da sinistra verso destra ) :" + mostFollowers.toString());
+        System.out.println("Top 3 degli utenti più popolari ( in ordine decrescente da sinistra verso destra ) :" + mostFollowers.toString());
     }
 
     public static void RunTestGetMentionedUser(){
 
-        System.out.println("\n---------------------TEST MicroBlog GetMentionedUsers---------------------\n");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK GETMENTIONEDUSERS---------------------\n");
 
         List<Post> listOfPosts = new LinkedList<>();
         listOfPosts.add(post1);
@@ -164,7 +164,7 @@ public class TestingSocialNetwork {
         listOfUsers = MicroBlog.getMentionedUsers();
         System.out.println("Lista degli utenti iscritti alla rete sociale :" + listOfUsers.toString());
 
-        //Test per getMentionedUsers con parametro
+        System.out.println("\n-----------------GETMENTIONEDUSERS CON PARAMETRO------------------\n");
 
         listOfUsers = MicroBlog.getMentionedUsers(listOfPosts);
         System.out.println("Lista degli utenti data dalla lista dei post  :" + listOfUsers.toString());
@@ -173,7 +173,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestWrittenBy(){
 
-        System.out.println("\n---------------------TEST MicroBlog WrittenBy---------------------\n");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK WRITTENBY---------------------\n");
 
         try{
             System.out.println("Stampo i post dell'utente 1");
@@ -190,7 +190,7 @@ public class TestingSocialNetwork {
         }
 
         //Testing WrittenBy con Parametri
-        System.out.println("\n---------------------WrittenBy con parametro---------------------\n");
+        System.out.println("\n-----------------WRITTENBY CON PARAMETRO------------------\n");
         List<Post> listOfPosts = new LinkedList<>();
         listOfPosts.add(post1);
         listOfPosts.add(post2);
@@ -214,7 +214,7 @@ public class TestingSocialNetwork {
 
     public static void RunTestContaining(){
 
-        System.out.println("\n---------------------TEST MicroBlog Containing---------------------\n");
+        System.out.println("\n---------------------TEST SOCIAL NETWORK CONTAINING---------------------\n");
 
         List<String> words = new ArrayList<>();
 

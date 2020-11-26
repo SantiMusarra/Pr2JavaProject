@@ -3,13 +3,16 @@ package com.MusarraSanti.Code;
 import com.MusarraSanti.Exception.ExceededCharactersLimitException;
 import com.MusarraSanti.Exception.UserAlreadyExistException;
 import com.MusarraSanti.Exception.UserNotExistException;
-import com.sun.tools.attach.AttachOperationFailedException;
-
-import javax.print.attribute.standard.NumberUp;
 import java.util.*;
 
 
 public class SocialNetwork implements BaseSocialNetwork {
+
+
+    //TODO Abstraction function:
+
+    //TODO Invariant representation:
+
 
     private String nameNetwork;
     private int id = 0;
@@ -35,11 +38,10 @@ public class SocialNetwork implements BaseSocialNetwork {
     /*
     REQUIRES: user != null
     THROWS: if user == null throws NullPointerException
-    MODIFIES:
     EFFECTS: ritorna la verifica dell'esistenza dell'utente. True se l'utente esiste false altrimenti
     */
-    private boolean isUserExist(String user){
-        //TODO SCRIVERE SPECIFICA
+    public boolean isUserExist(String user){
+
         if(user == null) throw new NullPointerException();
 
         return userPosts.containsKey(user);
@@ -86,8 +88,6 @@ public class SocialNetwork implements BaseSocialNetwork {
         if(post == null) throw new NullPointerException();
         if(user == null) throw new NullPointerException();
 
-        //TODO E se il post non  è presente nel social network?
-
         //Controllo che l'utente e l'autore del post esistano
         if(!isUserExist(user) || !isUserExist(post.getAuthor()) ) throw new UserNotExistException();
 
@@ -130,10 +130,8 @@ public class SocialNetwork implements BaseSocialNetwork {
 
         if(followers == null)   throw new NullPointerException();
 
-
-        List<String> influencer = new ArrayList<>();
-
-        int max = -1 , sec = 0;
+        List<String> influencer = new LinkedList<>();
+        List<Integer> numberOfFollowers = new LinkedList<>();
 
         for (Map.Entry<String, Set<String>> entry: followers.entrySet()) {
 
@@ -141,18 +139,16 @@ public class SocialNetwork implements BaseSocialNetwork {
             Set<String> userFollowers = entry.getValue();
 
             int countedFollowers = userFollowers.size();
-
-            if(countedFollowers > max){
-                influencer.add(user);
-                max = countedFollowers;
+            int i = 0;
+            while(i < numberOfFollowers.size() && countedFollowers < numberOfFollowers.get(i) ){
+                i++;
             }
-            if(countedFollowers < max && countedFollowers > sec ){
-                influencer.add(user);
-            }
+            influencer.add(i, user);
+            numberOfFollowers.add(i ,countedFollowers);
 
         }
 
-        return influencer;
+        return influencer.subList(0,Math.min(3,influencer.size()));
     }
 
     //Ritorna la lista degli utenti del social network che sono iscritti

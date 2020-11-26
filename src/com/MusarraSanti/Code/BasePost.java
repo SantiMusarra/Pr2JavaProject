@@ -4,13 +4,9 @@ import java.util.List;
 
 public interface BasePost {
 
-    //OVERVIEW:
+    //TODO OVERVIEW:
 
-    //TYPICAL ELEMENT:
-
-    //Abstraction function:
-
-    //Invariant representation:
+    //TODO TYPICAL ELEMENT:
 
     //EFFECTS: Return the id of this post
     public int getID();

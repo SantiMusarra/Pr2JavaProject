@@ -7,6 +7,10 @@ import java.util.*;
 
 public class Post implements BasePost {
 
+    //TODO Abstraction function:
+
+    //TODO Invariant representation:
+
     public static final int CHARACTERS_LIMIT = 140;
     private int id;
     private String author;

@@ -76,10 +76,18 @@ public class TestingSocialNetworkOffensiveContent {
         System.out.println("--------------------------------LISTA DI TUTTI I POST OFFENSIVI DA PARTE DI UN UTENTE------------------");
 
         System.out.println("Lista dei post offensivi dell'utente1");
-        System.out.println(MicroBlog.getUserExplicitPost(utente1));
+        try {
+            System.out.println(MicroBlog.getUserExplicitPost(utente1));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("Lista dei post offensivi dell'utente 4");
-        System.out.println(MicroBlog.getUserExplicitPost(utente4));
+        try {
+            System.out.println(MicroBlog.getUserExplicitPost(utente4));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());;
+        }
 
     }
     public static void RunTestGetUserNotExplicitPosts(){
@@ -87,10 +95,18 @@ public class TestingSocialNetworkOffensiveContent {
         System.out.println("--------------------------------LISTA DI TUTTI I POST NON OFFENSIVI DA PARTE DI UN UTENTE------------------");
 
         System.out.println("Lista dei post non offensivi dell'utente 1");
-        System.out.println(MicroBlog.getUserNotExplicitPost(utente1));
+        try {
+            System.out.println(MicroBlog.getUserNotExplicitPost(utente1));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("Lista dei post non offensivi dell'utente 2");
-        System.out.println(MicroBlog.getUserNotExplicitPost(utente2));
+        try {
+            System.out.println(MicroBlog.getUserNotExplicitPost(utente2));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
 
     }

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1207f6-0167-40ce-949b-33486a691e1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BatteriaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserAlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserAlreadyExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Exception/UserNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +39,9 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Primo Progetto Intermedio Orsucci Gianluca" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Code.Main" />
+  <component name="RunManager" selected="Application.BatteriaTest">
+    <configuration name="BatteriaTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.MusarraSanti.Code.BatteriaTest" />
       <module name="Pr2JavaProject" />
       <extension name="coverage">
         <pattern>
@@ -78,7 +78,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.BatteriaTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -127,22 +127,22 @@
     </state>
     <state x="529" y="123" key="FileChooserDialogImpl/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598511134" />
     <state x="635" y="149" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605872615555" />
-    <state width="1865" height="294" key="GridCell.Tab.0.bottom" timestamp="1606390297564">
+    <state width="1865" height="294" key="GridCell.Tab.0.bottom" timestamp="1606408056211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
-    <state width="1865" height="294" key="GridCell.Tab.0.center" timestamp="1606390297564">
+    <state width="1865" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056211" />
+    <state width="1865" height="294" key="GridCell.Tab.0.center" timestamp="1606408056210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
-    <state width="1865" height="294" key="GridCell.Tab.0.left" timestamp="1606390297564">
+    <state width="1865" height="294" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056210" />
+    <state width="1865" height="294" key="GridCell.Tab.0.left" timestamp="1606408056210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
-    <state width="1865" height="294" key="GridCell.Tab.0.right" timestamp="1606390297564">
+    <state width="1865" height="294" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056210" />
+    <state width="1865" height="294" key="GridCell.Tab.0.right" timestamp="1606408056211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606390297564" />
+    <state width="1865" height="294" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056211" />
     <state width="1865" height="335" key="GridCell.Tab.1.bottom" timestamp="1606061664269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

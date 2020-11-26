@@ -3,7 +3,7 @@ package com.MusarraSanti.Code;
 import com.MusarraSanti.Testing.TestingSocialNetwork;
 import com.MusarraSanti.Testing.TestingSocialNetworkOffensiveContent;
 
-public class Main {
+public class BatteriaTest {
 
     public static void main(String[] args) {
 

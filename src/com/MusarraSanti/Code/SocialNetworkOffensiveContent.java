@@ -8,11 +8,21 @@ import java.util.List;
 
 public class SocialNetworkOffensiveContent extends SocialNetwork {
 
+    //TODO Abstraction function:
+
+    //TODO Invariant representation:
+
     private List<String> offensiveWords;
     private List<Post> listOfExplicitPosts;
     private List<Post> listOfNotExplicitPosts;
 
-    //TODO SPECIFICA
+    /*
+    REQUIRES: nameNetwork != null && offensiveWords != null
+    THROWS: if nameNetwork == null throws NullPointerException   (unchecked)
+            if offensiveWords == null throws NullPointerException (unchecked)
+    MODIFIES: this
+    EFFECTS: Initialize this < nameNetwork >
+    */
     public SocialNetworkOffensiveContent(String nameNetwork , List<String> offensiveWords) {
         super(nameNetwork);
 
@@ -23,17 +33,28 @@ public class SocialNetworkOffensiveContent extends SocialNetwork {
     }
 
     /*
-       EFFECTS: restituisce quei post del social network segnalati come offensivi
+       EFFECTS: restituisce quei post del social network segnalati come non offensivi
     */
-
     public List<Post> getNotExplicitPosts() {
         return listOfNotExplicitPosts;
     }
 
+    /*
+       EFFECTS: restituisce quei post del social network segnalati come offensivi
+    */
     public List<Post> getExplicitPosts(){
         return this.listOfExplicitPosts;
     }
 
+    /*
+    REQUIRES: user != null && text != null && text.length < 140 && isUserExist(username)
+    THROWS: if user == null throws NullPointerException( unchecked)
+            if text == null throws NullPointerException( unchecked)
+            if text.length >=140 throws ExceededCharactersLimitException ( checked )
+            if !isUserExist(username) throws UserNotExistException (checked)
+    MODIFIES: this
+    EFFECTS: crea un post nella rete sociale e decide se metterlo nella lista dei post offensivi o nella lista dei post non offensivi
+     */
     @Override
     public Post createPost(String user, String text) throws UserNotExistException, ExceededCharactersLimitException {
 
@@ -45,9 +66,16 @@ public class SocialNetworkOffensiveContent extends SocialNetwork {
 
     }
 
-    public List<Post> getUserExplicitPost(String user){
+    /*
+    REQUIRES: user != null && isUserExist(user)
+    THROWS: if user == null throws NullPointerException (unchecked)
+            if !isUserExist(user) throws UserNotExistException (checked)
+    EFFECTS: ritorna la lista dei post offensivi dell'utente parametro
+     */
+    public List<Post> getUserExplicitPost(String user) throws UserNotExistException {
 
         if(user == null) throw new NullPointerException();
+        if(!super.isUserExist(user)) throw new UserNotExistException();
 
         List<Post> listOfPost = new LinkedList<>();
         for (Post post : listOfExplicitPosts) {
@@ -58,10 +86,16 @@ public class SocialNetworkOffensiveContent extends SocialNetwork {
         return  listOfPost;
     }
 
-    public List<Post> getUserNotExplicitPost(String user){
+    /*
+   REQUIRES: user != null && isUserExist(user)
+   THROWS: if user == null throws NullPointerException (unchecked)
+           if !isUserExist(user) throws UserNotExistException (checked)
+   EFFECTS: ritorna la lista dei post non offensivi dell'utente parametro
+    */
+    public List<Post> getUserNotExplicitPost(String user) throws UserNotExistException {
 
         if(user == null) throw new NullPointerException();
-
+        if(!super.isUserExist(user)) throw new UserNotExistException();
         List<Post> listOfPost = new LinkedList<>();
         for (Post post : listOfNotExplicitPosts) {
 
@@ -72,8 +106,7 @@ public class SocialNetworkOffensiveContent extends SocialNetwork {
     }
 
     /*
-
-
+    EFFECTS: ritorna un valore booleano : true se il post è offensivo false altrimenti
      */
     private boolean isExplicit(Post post){
 
