@@ -10,10 +10,12 @@ public class Post implements BasePost {
     //OVERVIEW: Descrive il tipo di dato Post con un id , un testo , un autore
     //          una data di pubblicazione e una lista di like
 
+    //TYPICAL ELEMENT: < id , author , text , timestamp , {x,...,xn} >
+
     //TODO Abstraction function:
 
-    //TODO Invariant representation: id != null && author != null && text != null && text.length < CHARACTERS_LIMIT
-
+    //Invariant representation: id >= 0 && author != null && text != null && text.length <= CHARACTERS_LIMIT
+    //                          && timestamp != null && likes{x,...,xn} != null
 
     public static final int CHARACTERS_LIMIT = 140;
     private int id;

@@ -10,9 +10,11 @@ public class SocialNetwork implements BaseSocialNetwork {
 
     //OVERVIEW: Questa interfaccia definisce il tipo di dato SocialNetwork assegnandoli un nome
 
+    //TYPICAL ELEMENT: SocialNetwork < Name >
+
     //TODO Abstraction function:
 
-    //TODO Invariant representation:    nameNetwork != null && user != null && posts{x1,...,xn} != null
+    //Invariant representation:    nameNetwork != null && user != null && posts{x1,...,xn} != null
     //                                  && text.length < CHARACTERS_LIMIT && Map<String , Set<String> != null
     //                                  && post != null && words{x1,...,xn} != null
 

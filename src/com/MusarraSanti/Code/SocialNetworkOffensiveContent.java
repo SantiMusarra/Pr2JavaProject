@@ -14,7 +14,7 @@ public class SocialNetworkOffensiveContent extends SocialNetwork {
 
     //TODO Abstraction function:
 
-    //TODO Invariant representation: super() && offensiveWords{x1,...,xn} != null && text != null && user != null
+    //Invariant representation: super() && offensiveWords{x1,...,xn} != null && text != null && user != null
     //                               && text.length < post.CHARACTERS_LIMITS
 
     private List<String> offensiveWords;

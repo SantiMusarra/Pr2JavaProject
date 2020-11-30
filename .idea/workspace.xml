@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5b1207f6-0167-40ce-949b-33486a691e1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" afterDir="false" />
