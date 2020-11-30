@@ -10,9 +10,9 @@ import java.util.Set;
 
 public interface BaseSocialNetwork {
 
-    //TODO OVERVIEW: Questa interfaccia definisce il tipo di dato SocialNetwork assegnandoli un nome
+    //OVERVIEW: Questa interfaccia definisce il tipo di dato SocialNetwork assegnandoli un nome
 
-    //TODO TYPICAL ELEMENT: SocialNetwork < Name >
+    //TYPICAL ELEMENT: SocialNetwork < Name >
 
     /*
     REQUIRES: username != null && !isUserExist(username)

@@ -6,6 +6,7 @@ public interface BasePost {
 
     //OVERVIEW: Questa interfaccia definisce il tipo di dato  Post con un id , un testo , un autore
     //          una data di pubblicazione e una lista di like
+
     //TYPICAL ELEMENT: < id , author , text , timestamp , {x,...,xn} >
 
     //EFFECTS: Return the id of this post

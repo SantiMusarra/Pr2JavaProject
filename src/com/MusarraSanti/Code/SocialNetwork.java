@@ -8,10 +8,13 @@ import java.util.*;
 
 public class SocialNetwork implements BaseSocialNetwork {
 
+    //OVERVIEW: Questa interfaccia definisce il tipo di dato SocialNetwork assegnandoli un nome
 
     //TODO Abstraction function:
 
-    //TODO Invariant representation:
+    //TODO Invariant representation:    nameNetwork != null && user != null && posts{x1,...,xn} != null
+    //                                  && text.length < CHARACTERS_LIMIT && Map<String , Set<String> != null
+    //                                  && post != null && words{x1,...,xn} != null
 
 
     private String nameNetwork;

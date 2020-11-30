@@ -8,11 +8,14 @@ import java.util.List;
 
 public class SocialNetworkOffensiveContent extends SocialNetwork {
 
-    //OVERVIEW:
+    //OVERVIEW: Questa classe estende il tipo di dato SocialNetwork assegnandoli anche una lista di parole offensive
+
     //TYPICAL ELEMENT: <Name , list_of_offensiveWords{x,...,xn}>
+
     //TODO Abstraction function:
 
-    //TODO Invariant representation:
+    //TODO Invariant representation: super() && offensiveWords{x1,...,xn} != null && text != null && user != null
+    //                               && text.length < post.CHARACTERS_LIMITS
 
     private List<String> offensiveWords;
     private List<Post> listOfExplicitPosts;
