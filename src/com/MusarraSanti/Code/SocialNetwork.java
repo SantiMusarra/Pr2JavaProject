@@ -82,7 +82,7 @@ public class SocialNetwork implements BaseSocialNetwork {
         return myPost;
 
     }
-
+    
     public void addLikeToPost(Post post , String user) throws  UserNotExistException{
 
         if(post == null) throw new NullPointerException();
@@ -104,6 +104,7 @@ public class SocialNetwork implements BaseSocialNetwork {
 
     }
 
+    //Ritorna una Mappa che associa Utente a numero di followers in base alla lista dei post passata come parametro
     public Map<String, Set<String>> guessFollowers(List<Post> ps) {
 
         if(ps == null) throw new NullPointerException();
@@ -125,7 +126,7 @@ public class SocialNetwork implements BaseSocialNetwork {
         }
         return guessedFollowers;
     }
-
+    //Ritorna i primi 3 utenti con più followers dalla Map followers passata come parametro
     public List<String> influencers(Map<String, Set<String>> followers) {
 
         if(followers == null)   throw new NullPointerException();
@@ -178,7 +179,7 @@ public class SocialNetwork implements BaseSocialNetwork {
 
         return listOfUsers;
     }
-
+    //Ritorna la lista dei post scritti da "user"
     public List<Post> writtenBy(String user) throws UserNotExistException{
 
         if(user == null) throw new NullPointerException();
@@ -187,7 +188,7 @@ public class SocialNetwork implements BaseSocialNetwork {
         List<Post> postList = userPosts.get(user);
         return postList;
     }
-
+    //Ritorna la lista dei post scritti da user dalla lista dei post ricevuta come parametro
     public List<Post> writtenBy(List<Post> ps, String user){
 
         if(user == null) throw new NullPointerException();
@@ -203,7 +204,7 @@ public class SocialNetwork implements BaseSocialNetwork {
 
         return listOfPost;
     }
-
+    //Ritorna la lista dei post che contiene almeno una parola contenuta nella lista parametro
     public List<Post> containing(List<String> words) {
 
         if(words == null) throw new NullPointerException();

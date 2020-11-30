@@ -50,7 +50,7 @@ public class TestingSocialNetworkOffensiveContent {
              MicroBlog.createPost(utente4,"Oggi c'è un cielo stupendo");
              MicroBlog.createPost(utente3,"Oggi c'è un tempo di merda");
              MicroBlog.createPost(utente3,"Il sole splende come non ha mai....");
-            MicroBlog.createPost(utente2,"Post malone");
+             MicroBlog.createPost(utente2,"Post malone");
 
 
         } catch (Exception e) {

@@ -5,11 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BasePost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BaseSocialNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/BatteriaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Code/SocialNetworkOffensiveContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/MusarraSanti/Testing/TestingSocialNetworkOffensiveContent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,22 +125,22 @@
     </state>
     <state x="529" y="123" key="FileChooserDialogImpl/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598511134" />
     <state x="635" y="149" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605872615555" />
-    <state width="1865" height="294" key="GridCell.Tab.0.bottom" timestamp="1606408056211">
+    <state width="1865" height="359" key="GridCell.Tab.0.bottom" timestamp="1606432098929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056211" />
-    <state width="1865" height="294" key="GridCell.Tab.0.center" timestamp="1606408056210">
+    <state width="1865" height="359" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606432098929" />
+    <state width="1865" height="359" key="GridCell.Tab.0.center" timestamp="1606432098929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056210" />
-    <state width="1865" height="294" key="GridCell.Tab.0.left" timestamp="1606408056210">
+    <state width="1865" height="359" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606432098929" />
+    <state width="1865" height="359" key="GridCell.Tab.0.left" timestamp="1606432098929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056210" />
-    <state width="1865" height="294" key="GridCell.Tab.0.right" timestamp="1606408056211">
+    <state width="1865" height="359" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606432098929" />
+    <state width="1865" height="359" key="GridCell.Tab.0.right" timestamp="1606432098929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="294" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606408056211" />
+    <state width="1865" height="359" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606432098929" />
     <state width="1865" height="335" key="GridCell.Tab.1.bottom" timestamp="1606061664269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,11 +161,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="192" y="0" key="SettingsEditor/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1604598514970" />
-    <state x="517" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1606337633532">
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1606574365869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="206" key="com.intellij.ide.util.TipDialog/-1920.-129.1920.1040/0.0.1600.860@0.0.1600.860" timestamp="1605197474499" />
-    <state x="517" y="249" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606337633532" />
+    <state x="517" y="249" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606574365869" />
     <state x="70" y="0" key="new project wizard" timestamp="1605197497164">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -8,6 +8,8 @@ import java.util.List;
 
 public class SocialNetworkOffensiveContent extends SocialNetwork {
 
+    //OVERVIEW:
+    //TYPICAL ELEMENT: <Name , list_of_offensiveWords{x,...,xn}>
     //TODO Abstraction function:
 
     //TODO Invariant representation:
