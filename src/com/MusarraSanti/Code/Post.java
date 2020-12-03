@@ -7,15 +7,17 @@ import java.util.*;
 
 public class Post implements BasePost {
 
-    //OVERVIEW: Descrive il tipo di dato Post con un id , un testo , un autore
+    //OVERVIEW: Implementa il tipo di dato Post con un id , un testo , un autore
     //          una data di pubblicazione e una lista di like
 
-    //TYPICAL ELEMENT: < id , author , text , timestamp , {x,...,xn} >
+    //TYPICAL ELEMENT: < id , author , text , timestamp ,{like_0,...,like_n} >
 
-    //TODO Abstraction function:
+    //AF(c):<c.id , c.author , c.text , c.timestamp, {c.likes.get(i) | 0 <= i < c.likes.size()}>
 
-    //Invariant representation: id >= 0 && author != null && text != null && text.length <= CHARACTERS_LIMIT
-    //                          && timestamp != null && likes{x,...,xn} != null
+    //Invariant representation: id >= 0 && author != null && text != null && text.length() <= CHARACTERS_LIMIT
+    //                          && timestamp != null && likes != null && likes.get(i) != null for all 0 <= i < likes.size()
+    //                          && !likes.get(i).equals(likes.get(j)) for all 0 <= i < likes.size()
+    //                          && !likes.get(i).equals(author) for all 0 <= i < likes.size()
 
     public static final int CHARACTERS_LIMIT = 140;
     private int id;

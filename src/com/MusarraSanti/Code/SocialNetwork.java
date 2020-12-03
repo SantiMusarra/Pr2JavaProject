@@ -8,16 +8,28 @@ import java.util.*;
 
 public class SocialNetwork implements BaseSocialNetwork {
 
-    //OVERVIEW: Questa interfaccia definisce il tipo di dato SocialNetwork assegnandoli un nome
+    //OVERVIEW: Questa classe  implementa  il tipo di dato SocialNetwork il quale crea una rete sociale
+    //          fatta di utenti , dei loro post e dei loro followers
 
-    //TYPICAL ELEMENT: SocialNetwork < Name >
+    //TYPICAL ELEMENT: SocialNetwork < name , {<user_0, {post_0, ..., post_n}>, ... ,<user_s, {post_0, ..., post_m}>} ,
+    //                                 {<user_0, {follower_0, ..., follower_n}>, ... ,<user_s, {follower_0, ..., follower_m}>}>
 
-    //TODO Abstraction function:
+    //AF(c): < c.nameNetwork ,
+    // { < user , {userPosts.get(user).get(j) | 0 <= j < userPosts.get(user).size() } > | user = userPosts.keySet().get(i) && 0 <= i < userPosts.keySet().size() } ,
+    // { < user , {followers.get(user).get(j) | 0 <= j < followers.get(user).size() } > | user = followers.keySet().get(i) && 0 <= i < followers.keySet().size() } >
 
-    //Invariant representation:    nameNetwork != null && user != null && posts{x1,...,xn} != null
-    //                                  && text.length < CHARACTERS_LIMIT && Map<String , Set<String> != null
-    //                                  && post != null && words{x1,...,xn} != null
-
+    //Invariant representation:         id >= 0 && nameNetwork != null && userPosts != null
+    //                                  && followers != null && followed != null
+    //                                  && userPosts.keySet().get(i) != null for all 0 <= i < userPosts.keySet().size()
+    //                                  && userPosts.values().get(i) != null for all 0 <= i < userPosts.values().size()
+    //                                  && followers.keySet().get(i) != null for all 0 <= i < followers.keySet().size()
+    //                                  && followers.values().get(i) != null for all 0 <= i < followers.values().size()
+    //                                  && followed.keySet().get(i) != null for all 0 <= i < followed.keySet().size()
+    //                                  && followed.values().get(i) != null for all 0 <= i < followed.values().size()
+    //                                  && userPosts.keySet().equals(followers.keySet())
+    //                                  && followers.keySet().equals(followed.keySet())
+    //                                  && !followers.values().get(i).equals(followers.values().get(j) for all 0 <= i < j < followers.values().size()
+    //                                  && !followed.values().get(i).equals(followed.values().get(j) for all 0 <= i < j < followed.values().size()
 
     private String nameNetwork;
     private int id = 0;
